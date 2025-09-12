@@ -1,0 +1,67 @@
+@import './../../../global/styles.scss';
+
+*{
+    background-color: transparent;
+}
+
+.banner{
+    height: 100vh;
+    display: flex;              
+    align-items: center;        
+    justify-content: center;
+    background-image: url('/hotelH.jpeg');
+    background-size: cover;               // Faz a imagem ocupar toda a tela
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+    
+    .content{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        z-index: 2;
+        align-items: center;
+        justify-content: center;
+
+        h1{
+            font-weight: bold;
+        } p{
+            font-weight:550;
+        } a {
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .btn-welcome{
+            width: 150px;
+            height: 50px;
+            background: linear-gradient(90deg, $gold1, $gold2);
+            margin-top: 20px;
+            border: 3px solid $bordo;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor : pointer;
+            border-radius: 25px;
+            transition: all 0.5s ease;
+            scale: 1;
+
+            &:hover{
+                background: linear-gradient(90deg, $gold2, $gold1);
+                scale: 1.1;
+            }
+        }
+    }
+    
+}

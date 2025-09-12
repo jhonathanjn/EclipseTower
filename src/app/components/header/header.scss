@@ -1,0 +1,55 @@
+@import '../../../global/styles.scss'; // Corrigido o caminho do import
+
+* {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: $background2;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;        // Alinha verticalmente logo e menu
+  justify-content: space-between;
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 50px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;      // Garante alinhamento vertical dos itens
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    margin-right: 100px;
+  }
+
+  li {
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: darken($textIcons, 40%);
+      transition: color 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        color: $textIcons;
+      }
+    }
+  }
+}
+
