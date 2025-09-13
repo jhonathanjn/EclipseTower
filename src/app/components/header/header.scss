@@ -1,4 +1,5 @@
-@import '../../../global/styles.scss'; // Corrigido o caminho do import
+@use "sass:color";
+@use '../../../global/styles.scss'; // Corrigido o caminho do import
 
 * {
   background-color: transparent;
@@ -8,7 +9,7 @@
 }
 
 .navbar {
-  background-color: $background2;
+  background-color: styles.$background2;
   padding: 10px 20px;
   position: fixed;
   top: 0;
@@ -42,12 +43,12 @@
     a {
       text-decoration: none;
       font-weight: bold;
-      color: darken($textIcons, 40%);
+      color: color.adjust(styles.$textIcons, $lightness: -40%);
       transition: color 0.3s ease;
       cursor: pointer;
 
       &:hover {
-        color: $textIcons;
+        color: styles.$textIcons;
       }
     }
   }

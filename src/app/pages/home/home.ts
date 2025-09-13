@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import { Header } from "../../components/header/header";
+import { Footer } from "../../components/footer/footer";
+import { QuartosComponent } from "../../components/quartos/quartos";
 
 @Component({
   selector: 'app-home',
-  imports: [Header],
+  standalone: true,
+  imports: [Header, Footer, QuartosComponent],
   templateUrl: './home.html',
-  styleUrl: './home.scss'
+  styleUrls: ['./home.scss']
 })
 export class Home {
 

@@ -1,0 +1,59 @@
+<section class="quartos-section">
+  <h1>Veja nossos quartos disponíveis</h1>
+  <div class="quartos">
+    <div class="quarto" *ngFor="let quarto of quartos">
+      <img class="quarto-img" [src]="quarto.img" [alt]="quarto.nome" />
+      <h2>{{ quarto.nome }}</h2>
+      <p>{{ quarto.descricao }}</p>
+      <button class="btn-reserva" (click)="openPopUp(quarto)">Reservar</button>
+    </div>
+  </div>
+</section>
+
+<div class="popup" *ngIf="quartoSelecionado">
+  <div class="popup-content">
+    <div class="description">
+        <img class="quarto-img" [src]="quartoSelecionado.img" [alt]="quartoSelecionado.nome" />
+        <h2>{{ quartoSelecionado.nome }}</h2>
+        <p>{{ quartoSelecionado.detalhes }}</p>
+    </div>
+
+    <div class="form">
+        <form (ngSubmit)="enviarReserva()" #formReserva="ngForm" class="form-reserva">
+      <div class="form-group">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" [(ngModel)]="reserva.name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" [(ngModel)]="reserva.email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="entrada">Data de Entrada</label>
+        <input type="date" id="entrada" name="entrada" [(ngModel)]="reserva.entrada" required />
+      </div>
+
+      <div class="form-group">
+        <label for="saida">Data de Saída</label>
+        <input type="date" id="saida" name="saida" [(ngModel)]="reserva.saida" required />
+      </div>
+
+      <div class="form-group">
+        <label for="numCartao">Número do Cartão</label>
+        <input type="text" id="numCartao" name="numCartao" [(ngModel)]="reserva.numCartao" required />
+      </div>
+
+      <div class="form-group">
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" [(ngModel)]="reserva.mensagem"></textarea>
+      </div>
+
+      <button type="submit" class="btn-enviar">Enviar Reserva</button>
+    </form>
+    </div>
+    <span class="fechar" (click)="closePopUp()">&times;</span>
+
+  </div>
+</div>

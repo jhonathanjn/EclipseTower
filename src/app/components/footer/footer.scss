@@ -1,0 +1,74 @@
+@use '../../../global/styles.scss' as styles;
+
+* {
+  background-color: transparent;
+}
+
+footer {
+  background-color: styles.$background2;
+  text-align: center;
+  padding: 20px 0;
+  color: styles.$textIcons;
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+
+    h3, p {
+      margin-top: 10px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 20px;
+
+      .footer-links,
+      .redes-sociais {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-weight: 400;
+
+        a {
+          text-decoration: none;
+          transition: all 0.3s ease;
+
+          &:hover {
+            font-weight: bold;
+            transform: scale(1.05);
+          }
+        }
+      }
+
+      .redes-sociais {
+        margin-right: 100px;
+
+        i {
+          margin-right: 10px;
+          font-size: 20px;
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+      }
+    }
+
+    span {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+  }
+}

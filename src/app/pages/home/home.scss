@@ -1,4 +1,4 @@
-@import './../../../global/styles.scss';
+@use '../../../global/styles.scss';
 
 *{
     background-color: transparent;
@@ -37,6 +37,7 @@
             font-weight: bold;
         } p{
             font-weight:550;
+            margin:10px
         } a {
             font-weight: bold;
             text-decoration: none;
@@ -45,9 +46,9 @@
         .btn-welcome{
             width: 150px;
             height: 50px;
-            background: linear-gradient(90deg, $gold1, $gold2);
+            background: linear-gradient(90deg, styles.$gold1, styles.$gold2);
             margin-top: 20px;
-            border: 3px solid $bordo;
+            border: 3px solid styles.$bordo;
 
             display: flex;
             align-items: center;
@@ -58,10 +59,112 @@
             scale: 1;
 
             &:hover{
-                background: linear-gradient(90deg, $gold2, $gold1);
+                background: linear-gradient(90deg, styles.$gold2, styles.$gold1);
                 scale: 1.1;
             }
         }
     }
     
 }
+
+.destaquesSection {
+  padding: 40px 20px;
+  color: styles.$textIcons;
+  text-align: center;
+
+  .destaque ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: initial;
+    margin: 50px;
+    align-items: center;
+
+
+    li {
+      font-size: 16px;
+      font-weight: 500;
+      position: relative;
+      padding-left: 20px;
+
+      &::before {
+        content: '✔';
+        position: absolute;
+        left: 0;
+        color: styles.$textIcons;
+      }
+    }
+  }
+}
+
+
+.depoimentosSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    height: 100vh;
+
+    .boxDepoimentos{
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        .cards{
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 80%;
+            background-color: rgba(styles.$background2, 0.5);
+            border-radius: 15px;
+
+            .cardDepoimento{
+            display: flex;
+            flex-direction: column ;
+            align-items: center;
+            justify-content: center;
+            background-color: styles.$blueDark;
+            border-radius: 15px;
+            border: 4px solid styles.$gold1;
+            text-align: center;
+            height: 200px;
+            width: 250px;
+            scale: 1;
+            transition: all 0.5s ease;
+
+
+            img{
+                height: 50px;
+                width: 50px;
+                border-radius: 50px;
+            }
+
+            p{
+                font-size: 16px;
+                font-weight: 500;
+                margin: 10px;
+            }
+            span{
+                font-size: 14px;
+                font-weight: 400;
+                margin-top: 5px;
+            }
+
+            &:hover{
+                scale: 1.10;
+                transform: translateY(-20px);
+            }
+        }
+
+        }
+    }
+}
+
