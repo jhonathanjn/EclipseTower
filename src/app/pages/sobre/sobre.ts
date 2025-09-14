@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
 import { Header } from "../../components/header/header";
 import { Footer } from "../../components/footer/footer";
-import { QuartosComponent } from "../../components/quartos/quartos";
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-sobre',
   standalone: true,
-  imports: [Header, Footer, QuartosComponent, RouterLink],
-  templateUrl: './home.html',
-  styleUrls: ['./home.scss']
+  imports: [Header, Footer, RouterLink],
+  templateUrl: './sobre.html',
+  styleUrl: './sobre.scss'
 })
-export class Home {
+export class Sobre {
 
 }

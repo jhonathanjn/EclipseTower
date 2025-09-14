@@ -1,0 +1,239 @@
+@use './../../../global/styles.scss' as styles;
+
+* {
+  background-color: transparent;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  .sobre-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: styles.$textIcons;
+    background-color: styles.$background2;
+    width: 100%;
+  }
+
+  .inicio {
+    position: relative; 
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: 20px;
+    background-image: url('https://i.pinimg.com/1200x/7e/26/fa/7e26fa1f20f34570f9a2d69d85abda1d.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .text-inicio {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      position: relative;
+      z-index: 2;
+
+      h1 {
+        margin: 20px;
+        color: styles.$gold1;
+        font-size: 34px;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); 
+      }
+    }
+    }
+
+    .sobre{
+        display: flex;
+        height: 100vh;
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+        text-align: initial;
+        gap: 100px;
+
+        img{
+            height: 70vh;
+            width: auto;
+            border: 3px solid styles.$gold1;
+            border-radius: 10px;
+            filter:saturate(2);
+            box-shadow: 10px 12px 8px rgba(255, 255, 255, 0.116);
+        }
+
+        h1, p{
+            margin: 30px;
+        }
+
+        h1{
+            color: styles.$gold2;
+        }
+
+        .sobre-dados{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .visao{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 100vh;
+
+        img{
+            height: 170px;
+            width: auto;
+            border-radius: 100px;
+            border: 2px solid styles.$gold1;
+        }
+
+        h1, p{
+            text-align: center;
+            width: 80%;
+            margin: 20px;
+        }
+
+        h1{
+            color: styles.$gold2;
+        }
+
+        .info-visão{
+            display: flex;
+            flex-direction: column;
+            text-align: initial;
+            justify-self: center;
+
+        }
+    }
+
+    .missoes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 90%;
+
+        h1{
+            color: styles.$gold2;
+        }
+
+        h1, p {
+            margin:20px;
+            width: 50%;
+        }
+
+        img{
+            height: 200px;
+            width: auto;
+        }
+
+        .img-missoes{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            border: 3px solid styles.$gold2;
+            border-radius: 13px;
+        }
+    }
+
+    .diferenciais{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: initial;
+        height: 100vh;
+        width: 85%;
+        gap: 50px;
+
+        h1{
+            color: styles.$gold2;
+        }
+
+        h1,p{
+            margin: 20px;
+        }
+
+        img{
+            height: 200px;
+            width: auto;
+        }
+
+        .info-diferenciais{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .img-diferenciais{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+
+        }
+    }
+
+    .chamada-final{
+        display: flex;
+        flex-direction: column;
+        height: 50vh;
+        margin: 20px;
+        align-items: center;
+        justify-content: center;
+
+        h1, p, a{
+            margin:20px;
+        }
+
+        h1{
+            color:  styles.$gold2;
+        }
+
+        a{
+            background: linear-gradient(135deg, styles.$gold1, styles.$gold2);
+            width: 150px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 20px;
+            text-decoration: none;
+            cursor: pointer;
+
+            &:hover{
+                scale: 1.05;
+                background: linear-gradient(135deg, styles.$gold2, styles.$gold1);
+                transform: translateZ(10);
+            }
+        }
+    }
+
+}
